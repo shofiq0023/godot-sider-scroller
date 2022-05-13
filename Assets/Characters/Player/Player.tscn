@@ -152,7 +152,8 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=1]
-height = 14.0
+radius = 11.0
+height = 12.0
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -160,13 +161,15 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 32 )
 animation = "Idle"
-frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.4, 0.4 )
+limit_left = -360
+limit_top = -500
+limit_bottom = 355
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2, 13 )
+position = Vector2( 0, 11 )
 shape = SubResource( 1 )
