@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var velocity = Vector2.ZERO;
+var title = "Game v1"
 
 const moveSpeed = 200;
 const GRAVITY = 20;
@@ -40,6 +41,7 @@ func getInput():
 			getAnimation();
 
 func _process(delta):
+	OS.set_window_title(title + " | fps: " + str(Engine.get_frames_per_second()));
 	velocity.y += GRAVITY;
 	
 	getInput();
