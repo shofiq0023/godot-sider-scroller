@@ -64,6 +64,14 @@ jump={
  ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="Enemy"
+2d_render/layer_3="World"
+2d_render/layer_4="Deco"
+2d_render/layer_5="Text"
+
 [physics]
 
 common/enable_pause_aware_picking=true

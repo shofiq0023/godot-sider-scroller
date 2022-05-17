@@ -19,9 +19,9 @@ func getAnimation():
 	
 	if not is_on_floor():
 		if velocity.y < 0:
-			$AnimatedSprite.play("Jump");
+			$AnimatedSprite.play("Jumping");
 		if velocity.y > 0:
-			$AnimatedSprite.play("Fall")
+			$AnimatedSprite.play("Falling")
 
 func getInput():
 	if Input.is_action_pressed("right"):
