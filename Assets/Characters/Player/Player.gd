@@ -84,3 +84,7 @@ func _process(delta):
 	
 	velocity.x = lerp(velocity.x, 0, 0.2);
 	velocity = move_and_slide(velocity, Vector2.UP);
+
+
+func _on_Area2D_body_entered(body: Node) -> void:
+	get_tree().change_scene("res://Scene/Main.tscn");

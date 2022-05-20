@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/movement-text.png-adcabb51bebb3c8d33be52a15d346e06.stex"
+path="res://.import/walk-movement.png-15a1dadcbda81b4a0fe511503b7bb618.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Navigation Sprites and text/movement-text.png"
-dest_files=[ "res://.import/movement-text.png-adcabb51bebb3c8d33be52a15d346e06.stex" ]
+source_file="res://Assets/Navigation Sprites and text/walk-movement.png"
+dest_files=[ "res://.import/walk-movement.png-15a1dadcbda81b4a0fe511503b7bb618.stex" ]
 
 [params]
 
