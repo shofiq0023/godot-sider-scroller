@@ -16,8 +16,8 @@
 [ext_resource path="res://Assets/Tiles/Decorations/Rock/rock_1.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Tiles/Decorations/Rock/rock_2.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Tiles/Decorations/Rock/rock_3.png" type="Texture" id=16]
-[ext_resource path="res://Assets/Navigation Sprites and text/jump-movement.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Navigation Sprites and text/movement.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Navigation Sprites and text/Jump-movement.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Navigation Sprites and text/Movement.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Navigation Sprites and text/walk-movement.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Navigation Sprites and text/Message.png" type="Texture" id=20]
 
@@ -834,7 +834,7 @@ texture = ExtResource( 7 )
 position = Vector2( 1416, 205 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 39 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
