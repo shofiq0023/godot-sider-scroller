@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Assets/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Tiles/oak_woods_tileset.png" type="Texture" id=2]
@@ -20,6 +20,10 @@
 [ext_resource path="res://Assets/Navigation Sprites and text/Movement.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Navigation Sprites and text/walk-movement.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Navigation Sprites and text/Message.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Characters/Enemy/Skeleton/Skeleton.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Assets/Characters/Enemy/Eye Bat/Eye-bat.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Assets/Characters/Enemy/Mushroom/Mushroom.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Assets/Characters/Enemy/Goblin/Goblin.tscn" type="PackedScene" id=24]
 
 [sub_resource type="OccluderPolygon2D" id=15]
 polygon = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
@@ -834,11 +838,10 @@ texture = ExtResource( 7 )
 position = Vector2( 1416, 205 )
 scale = Vector2( 1.3, 1.3 )
 frames = SubResource( 39 )
-frame = 4
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 192, 248 )
+position = Vector2( 176, 259 )
 
 [node name="Fence" type="Node2D" parent="."]
 
@@ -945,5 +948,17 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
 shape = SubResource( 48 )
+
+[node name="Skeleton" parent="." instance=ExtResource( 21 )]
+position = Vector2( 471, 246 )
+
+[node name="Mushroom" parent="." instance=ExtResource( 23 )]
+position = Vector2( 905, 190 )
+
+[node name="Goblin" parent="." instance=ExtResource( 24 )]
+position = Vector2( 1211, 222 )
+
+[node name="Eye-bat" parent="." instance=ExtResource( 22 )]
+position = Vector2( 1642, 214 )
 
 [connection signal="body_entered" from="Fallzone" to="Player" method="_on_Area2D_body_entered"]
