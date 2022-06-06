@@ -1,10 +1,11 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Assets/Characters/Enemy/Goblin/Sprites/Run.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Characters/Enemy/Goblin/Sprites/Death.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Characters/Enemy/Goblin/Sprites/Attack.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Characters/Enemy/Goblin/Sprites/Idle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Characters/Enemy/Goblin/Sprites/Take Hit.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Characters/Enemy/Goblin/Goblin.gd" type="Script" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -150,15 +151,19 @@ animations = [ {
 radius = 19.0
 height = 8.0
 
-[node name="Goblin" type="KinematicBody2D"]
+[node name="Goblin" type="Area2D"]
 scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 29 )
 animation = "Idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1, 3 )
 shape = SubResource( 30 )
+
+[connection signal="area_entered" from="." to="." method="_on_Goblin_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
