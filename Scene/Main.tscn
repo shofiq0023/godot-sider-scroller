@@ -842,7 +842,7 @@ frame = 3
 playing = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 176, 259 )
+position = Vector2( 188, 253 )
 
 [node name="Fence" type="Node2D" parent="."]
 
@@ -961,5 +961,3 @@ position = Vector2( 1211, 222 )
 
 [node name="Eye-bat" parent="." instance=ExtResource( 22 )]
 position = Vector2( 1642, 214 )
-
-[connection signal="body_entered" from="Fallzone" to="Player" method="_on_Area2D_body_entered"]
